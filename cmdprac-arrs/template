@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# global vars
+Cm_nm="cmd-name" ## change to name of command you are practicing
+
+####### arrays ######### 
+# questions
+declare -a ques
+ques=("" 
+      ""
+      ""
+    )
+
+# answers
+declare -a answ
+answ=(""
+      ""
+      ""
+    )
