@@ -44,7 +44,7 @@ exit_scrn() {
     ask_quest
 
     else
-      toilet "Have a good day!" 
+      toilet "Have a good day!"
     exit
   fi
 }
@@ -72,7 +72,7 @@ ask_quest() {
           echo "Tries left: " "${y}"
       fi
 
-      # check number of tries and give answer 
+      # check number of tries and give answer
       if [[ "$y" -eq 0 ]]; then
         echo
         echo "The correct answer is \"${answ[idx]}\""
