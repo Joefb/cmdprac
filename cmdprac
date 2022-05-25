@@ -7,10 +7,12 @@
 # The questions and answers are stored in arrays in the cmdprac-arrs
 # directory.
 
-# Be sure the indexes of the arrays match.
-
 # Source to ques and answ arrays
+# You can change apt-cmdprac to what ever you would like
 source ./cmdprac-arrs/apt-cmdprac
+
+# Create array for random index numbers
+declare -a rand_arr=()
 
 ##### functions #######
 
@@ -51,15 +53,15 @@ exit_scrn() {
 
 ask_quest() {
 
-  # ask question
-  for idx in "${!ques[@]}"; do
+  # ask questions
+  for idx in "${rand_arr[@]}"; do
     answr=""
     x=true
     y=3
 
     while [ "$x" == true ]; do
       echo
-      echo  "${ques[$idx]}"
+      echo "${ques[$idx]}"
       read -r answr
 
       # check answer
@@ -86,4 +88,13 @@ ask_quest() {
   exit_scrn
 }
 
+# iterate through each ele of ques array and store the index in rand_arr
+for ele in "${!ques[@]}"; do
+  rand_arr+=("${ele}")
+done
+
+# Shuffle rand_arr to randomize the elements
+rand_arr=( $(shuf -e "${rand_arr[@]}") )
+
+# Load intro screen
 intro_scrn

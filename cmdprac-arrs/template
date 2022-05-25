@@ -3,10 +3,10 @@
 # global vars
 Cm_nm="cmd-name" ## change to name of command you are practicing
 
-####### arrays ######### 
+####### arrays #########
 # questions
 declare -a ques
-ques=("" 
+ques=(""
       ""
       ""
     )
