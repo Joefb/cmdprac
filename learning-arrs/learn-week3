@@ -3,10 +3,10 @@
 # global vars
 Cm_nm="Boost Week3" ## change to name of command you are practicing
 
-####### arrays ######### 
+####### arrays #########
 # questions
 declare -a ques
-ques=("Use a command to show all IP addresses" 
+ques=("Use a command to show all IP addresses"
       "Use a command to clear the screen"
       "Use a command to display the full path to ssh"
       "Use a command to display what the type of ssh is"

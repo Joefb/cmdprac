@@ -5,10 +5,10 @@
 # global vars
 Cm_nm="apt" ## change to name of command you are practicing
 
-####### arrays ######### 
+####### arrays #########
 # questions
 declare -a ques
-ques=("Use apt to update the list of available packages and versions" 
+ques=("Use apt to update the list of available packages and versions"
       "Use apt to install vim and its dependencys"
       "Use apt to remove neovim and its config files"
       "Use apt to remove neovim but keep its config files"
@@ -35,7 +35,7 @@ answ=("sudo apt update"
       "sudo apt autoremove --purge"
       "sudo apt list --installed"
       "sudo apt list --upgradeable"
-      "sudo apt list | grep vim" 
+      "sudo apt list | grep vim"
       "sudo apt upgrade vim"
       "sudo apt upgrade"
       "apt search vim"

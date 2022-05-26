@@ -104,7 +104,6 @@ ask_quest() {
   exit_scrn
 }
 
-
 #### Options ###
 if [[ "${1}" == "--help" || -z "${1}" ]]; then
   help_scrn
@@ -117,6 +116,3 @@ else
   echo "${1} was not found in learning-arrs directory."
   echo "Use cmdprac --help for more info."
 fi
-
-# Load intro screen and start program
-#intro_scrn
