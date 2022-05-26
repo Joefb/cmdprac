@@ -4,9 +4,10 @@
 cmdprac is a bash script to help you learn a command by repetition.
 
 The questions and answers are stored in arrays in the learning-arrs
-directory. I call them learning arrays. You can eaisly create more
-learning arrays by using the template file in learning-arrs dir. Just
-copy the template and add the questions and answers.
+directory. I call them learning arrays. The questions will be asked in
+a random order. You can easily create more learning arrays by using the
+template file in learning-arrs dir. Just copy the template and add the
+questions and answers.
 
 The learning arrays also have a global var `Cm_nm` which is the name
 of the command you are learning. Change this to the name of the command
@@ -25,7 +26,7 @@ Best command name ever!)
 
 ### Usage
 `cmdprac learningArrName` Run the learning array of your choice</br>
-`cmdprac --ls` List avaliable learning arrays</br>
+`cmdprac --ls` List available learning arrays</br>
 `cmdprac --help` Display help</br>
 
 ### Create a new learning array
