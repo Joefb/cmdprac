@@ -4,14 +4,15 @@
 # Written by: Joe Burgess
 #
 # This script is used for practicing commands.
-# The questions and answers are stored in arrays in the cmdprac-arrs
+# The questions and answers are stored in arrays in the learning-arrs
 # directory.
 
 # Source to ques and answ arrays
-# You can change apt-cmdprac to what ever you would like
-source ./cmdprac-arrs/apt-cmdprac
+# You can change apt-cmdprac to what ever you would like to learn
+#source ./learning-arrs/apt-cmdprac
+#source ./learning-arrs/"${1}"
 
-# Create array for random index numbers
+# Create array to store learning array index numbers
 declare -a rand_arr=()
 
 ##### functions #######
@@ -51,7 +52,28 @@ exit_scrn() {
   fi
 }
 
+# help screen
+help_scrn() {
+  echo
+  echo "cmdprac help"
+  echo "Usage: cmdprac [OPTION] FILE"
+  echo
+  echo "Options:"
+  echo "--help     Display this help"
+  echo "--ls       List learning arrays"
+  echo
+  echo "The learning arrays are stored in the learning-arrs directory"
+  echo "Example: cmdprac learn-apt"
+}
+
+# iterate array to ask questions
 ask_quest() {
+  # store ques array indexes
+  for ele in "${!ques[@]}"; do
+    rand_arr+=("${ele}")
+  done
+  # shuffle elements to randomize questions
+  rand_arr=( $(shuf -e "${rand_arr[@]}") )
 
   # ask questions
   for idx in "${rand_arr[@]}"; do
@@ -88,13 +110,19 @@ ask_quest() {
   exit_scrn
 }
 
-# iterate through each ele of ques array and store the index in rand_arr
-for ele in "${!ques[@]}"; do
-  rand_arr+=("${ele}")
-done
 
-# Shuffle rand_arr to randomize the elements
-rand_arr=( $(shuf -e "${rand_arr[@]}") )
+#### Options ###
+if [[ "${1}" == "--help" || -z "${1}" ]]; then
+  help_scrn
+elif [[ "${1}" == "--ls" ]]; then
+  ls ./learning-arrs
+elif [[  -e "./learning-arrs/${1}" ]]; then
+  source ./learning-arrs/"${1}"
+  intro_scrn
+else
+  echo "${1} was not found in learning-arrs directory."
+  echo "Use cmdprac --help for more info."
+fi
 
-# Load intro screen
-intro_scrn
+# Load intro screen and start program
+#intro_scrn
