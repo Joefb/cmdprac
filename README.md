@@ -24,16 +24,16 @@ Best command name ever!)
 * `chmod +x cmdprac` - Make the script executable
 
 ### Usage
-`cmdprac learningArrName` Run the learning array of your choice
-`cmdprac --ls` List avaliable learning arrays
-`cmdprac --help` Display help
+`cmdprac learningArrName` Run the learning array of your choice</br>
+`cmdprac --ls` List avaliable learning arrays</br>
+`cmdprac --help` Display help</br>
 
 ### Create a new learning array
-1. Go into the `learning-arr` directory
-2. `cp template newName` to make a new learning array
-3. Use your favorite editor to edit the new learning array
-4. Change the `Cm-nm` var to the command name.
-5. Add in questions and answers.
+1. Go into the `learning-arr` directory</br>
+2. `cp template newName` to make a new learning array</br>
+3. Use your favorite editor to edit the new learning array</br>
+4. Change the `Cm-nm` var to the command name</br>
+5. Add in questions and answers</br>
 
 **When creating or changing questions and answers make sure the index
 of the arrays line up!** For example if you add a question at index 0 in

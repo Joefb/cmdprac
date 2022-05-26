@@ -4,13 +4,7 @@
 # Written by: Joe Burgess
 #
 # This script is used for practicing commands.
-# The questions and answers are stored in arrays in the learning-arrs
-# directory.
-
-# Source to ques and answ arrays
-# You can change apt-cmdprac to what ever you would like to learn
-#source ./learning-arrs/apt-cmdprac
-#source ./learning-arrs/"${1}"
+# See README for more info
 
 # Create array to store learning array index numbers
 declare -a rand_arr=()
